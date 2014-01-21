@@ -232,12 +232,12 @@ int main(int argc,char *argv[]) {
   printf("%d %d\n",(abs(h_direction)-h_pos)*(h_direction>0?1:-1),(abs(v_direction)-v_pos)*(v_direction>0?1:-1));
 
   if (h_stop == 3) {
-    startMotor(move_d,accel,-h_direction);
+    startMotor(move_d,accel,-h_direction * LEFT_DIR);
     delay(300);
     stopMotor(move_d);
   }
   if (v_stop == 3) {
-    startMotor(lift_d,accel,-v_direction);
+    startMotor(lift_d,accel,-v_direction * UP_DIR);
     delay(600);
     stopMotor(lift_d);
   }

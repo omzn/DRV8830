@@ -90,7 +90,7 @@ int main(int argc,char *argv[]) {
   wiringPiI2CWriteReg8(feed_d,0x00,0x03);
   // start motor 
   startMotor(feed_d,accel,1);
-  delay(time/2);
+  delay(time);
   stopMotor(feed_d);
   wiringPiI2CWriteReg8(feed_d,0x00,0x00);
   delay(500);
